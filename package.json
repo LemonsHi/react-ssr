@@ -12,7 +12,9 @@
     "dev:server": "webpack --config scripts/server.prod.js --mode development --watch --stats verbose",
     "build": "npm-run-all build:*",
     "build:client": "webpack build --config scripts/webpack.prod.js --mode production --stats verbose",
-    "build:server": "webpack build --config scripts/server.prod.js --mode production --stats verbose"
+    "build:server": "webpack build --config scripts/server.prod.js --mode production --stats verbose",
+    "clean": "rm -rf node_modules dist",
+    "bootstrap": "yarn install"
   },
   "dependencies": {
     "classnames": "^2.5.1",
