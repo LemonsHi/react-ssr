@@ -1,0 +1,59 @@
+{
+  "name": "react-ssr",
+  "version": "1.0.0",
+  "description": "react-ssr-demo",
+  "main": "index.js",
+  "author": "wujiawen",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --inspect dist/server.js",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:client": "webpack --config scripts/webpack.prod.js --mode development --watch --stats verbose",
+    "dev:server": "webpack --config scripts/server.prod.js --mode development --watch --stats verbose",
+    "build": "npm-run-all build:*",
+    "build:client": "webpack build --config scripts/webpack.prod.js --mode production --stats verbose",
+    "build:server": "webpack build --config scripts/server.prod.js --mode production --stats verbose"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "core-js": "^3.37.0",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-react": "^7.24.1",
+    "@babel/preset-typescript": "^7.24.1",
+    "@types/css-modules": "^1.0.5",
+    "@types/express": "^4.17.21",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.1",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "less": "^4.2.0",
+    "less-loader": "^12.2.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.38",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^9.5.8",
+    "style-loader": "^3.3.4",
+    "typescript": "^5.4.5",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0"
+  },
+  "engines": {
+    "node": "18.12.0",
+    "npm": "8.19.2"
+  }
+}
