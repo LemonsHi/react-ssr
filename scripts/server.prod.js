@@ -5,6 +5,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = merge(base, {
   // mode: 'production', // 生产模式
+  devtool: 'source-map',
   module: {
     rules: [
       {
